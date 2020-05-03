@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Helpful Items
+  - Background
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 577942807
+    locked: 0
+  - name: Ship
+    uniqueID: 3310309833
+    locked: 0
+  - name: Objective
+    uniqueID: 14610283
+    locked: 0
+  - name: Space Junk
+    uniqueID: 4096238121
+    locked: 0
+  - name: Player
+    uniqueID: 2502496945
+    locked: 0
