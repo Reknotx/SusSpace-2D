@@ -2328,6 +2328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06701779ef1e828409a2c482304b3e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeLimitInSeconds: 180
 --- !u!1 &438909000
 GameObject:
   m_ObjectHideFlags: 0
@@ -3535,7 +3536,7 @@ GameObject:
   - component: {fileID: 780717121}
   - component: {fileID: 780717122}
   m_Layer: 0
-  m_Name: Model
+  m_Name: Data
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9755,6 +9756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f427ce695a730b448510746b277228a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movingOverride: 0
 --- !u!1 &2064731720
 GameObject:
   m_ObjectHideFlags: 0
@@ -9800,7 +9802,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &2064731722
 MonoBehaviour:

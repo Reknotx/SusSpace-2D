@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class PlayerView : Element
 {
-    private void Update()
-    {
-        if (!app.model.player.Moving) return;
+    public bool movingOverride = false;
 
-        LinearInterpolate();
+    private void LateUpdate()
+    {
+        if (movingOverride)
+        {
+            LinearInterpolate();
+        }
+        else
+        {
+            if (!app.model.player.Moving) return;
+
+            LinearInterpolate();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

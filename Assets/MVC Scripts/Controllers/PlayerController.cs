@@ -39,6 +39,8 @@ public class PlayerController : Element
     public void EndMove()
     {
         app.model.player.Moving = false;
+        app.model.player.posAtStartOfMove = app.view.player.transform.position;
+        app.model.player.destination = app.view.player.transform.position;
     }
 
     public void AdjustSpeedModifier(float newModifier)

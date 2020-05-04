@@ -10,6 +10,8 @@ public class DisplayModel : Element
     //public float Seconds { get { return _seconds; } set { _seconds = value; } } 
     public float StartTime { get { return _startTime; } }
 
+    public float timeLimitInSeconds;
+
     //public GameObject menuPanel, endPanel;
 
     private void Awake()

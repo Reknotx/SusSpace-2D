@@ -4,9 +4,10 @@ using UnityEngine;
 
 public enum HinderanceToPlayer
 {
-    slow = 0,
-    loseItem = 1,
-    kill = 2
+    slow,
+    loseItem,
+    kill,
+    stop
 }
 
 public class HarmfulItem : Object
@@ -25,12 +26,19 @@ public class HarmfulItem : Object
             case HinderanceToPlayer.slow:
                 hinder = SlowPlayer;
                 break;
+
             case HinderanceToPlayer.loseItem:
                 hinder = RemoveItem;
                 break;
+
             case HinderanceToPlayer.kill:
                 hinder = KillPlayer;
                 break;
+
+            case HinderanceToPlayer.stop:
+                hinder = StopPlayer;
+                break;
+
             default:
                 break;
         }
@@ -57,5 +65,11 @@ public class HarmfulItem : Object
     public void KillPlayer()
     {
         Destroy(app.view.player.gameObject);
+    }
+
+    public void StopPlayer()
+    {
+        app.controller.player.EndMove();
+        Destroy(this.gameObject);
     }
 }
