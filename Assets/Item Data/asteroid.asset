@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc52d601114e1a9419bb9f3e4cb6dd8c, type: 3}
-  m_Name: Kite
+  m_Name: asteroid
   m_EditorClassIdentifier: 
   _numberOfUses: 1
-  _moveDistance: 7
+  _moveDistance: 6

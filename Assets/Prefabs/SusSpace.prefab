@@ -967,6 +967,7 @@ MonoBehaviour:
   - {fileID: 5643866961384746311}
   timeNumber: {fileID: 5643866960804142071}
   objectiveCounter: {fileID: 5643866960068356167}
+  gameOverText: {fileID: 2985341462179804247}
   menuPanel: {fileID: 5643866961678248379}
   endPanel: {fileID: 5643866961549199993}
 --- !u!1 &5643866960414470586
@@ -1050,6 +1051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06701779ef1e828409a2c482304b3e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeLimitInSeconds: 180
 --- !u!1 &5643866960463821463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,6 +2285,7 @@ RectTransform:
   - {fileID: 5643866961664000352}
   - {fileID: 5643866961678248378}
   - {fileID: 5643866961549199992}
+  - {fileID: 4206504099966116896}
   m_Father: {fileID: 5643866960167609040}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3968,3 +3971,82 @@ Transform:
   m_Father: {fileID: 5643866960167609040}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5808228678487801122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4206504099966116896}
+  - component: {fileID: 2837375869968282353}
+  - component: {fileID: 2985341462179804247}
+  m_Layer: 5
+  m_Name: Game Over
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &4206504099966116896
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5808228678487801122}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5643866961077585118}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 232.1, y: 109.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2837375869968282353
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5808228678487801122}
+  m_CullTransparentMesh: 0
+--- !u!114 &2985341462179804247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5808228678487801122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Time ran out! Restart the level to try again.

@@ -5,6 +5,12 @@ using UnityEngine;
 public class PlayerView : Element
 {
     public bool movingOverride = false;
+    private Rigidbody2D playerRB;
+
+    private void Start()
+    {
+        playerRB = GetComponent<Rigidbody2D>();
+    }
 
     private void LateUpdate()
     {
@@ -17,6 +23,7 @@ public class PlayerView : Element
             if (!app.model.player.Moving) return;
 
             LinearInterpolate();
+            //LinearInterpolateWithRB();
         }
     }
 
@@ -24,6 +31,13 @@ public class PlayerView : Element
     {
         //the background layer needs to be ignored with collisions.
         if (other.gameObject.layer == 9) return;
+
+        //Barriers and ship are on this layer
+        if (other.gameObject.layer == 10)
+        {
+            app.controller.player.CollidedWithShip();
+            return;
+        }
 
         var Object = other.gameObject.GetComponent<Object>();
 
@@ -82,6 +96,11 @@ public class PlayerView : Element
             //app.model.player.Moving = false;
             app.controller.player.EndMove();
         }
+    }
+
+    private void LinearInterpolateWithRB()
+    {
+        playerRB.MovePosition(Vector2.MoveTowards(app.view.player.transform.position, app.model.player.destination, 0.05f));
     }
 
     float EaseOut(float t)

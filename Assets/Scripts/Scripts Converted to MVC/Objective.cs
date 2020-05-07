@@ -35,8 +35,6 @@ public class Objective : Object
 
     private void Start()
     {
-        Debug.Log(this.gameObject);
-
         if (objectiveType == ObjectiveType.repairSpot)
         {
             app.model.objectives.AddObjective(this.gameObject);

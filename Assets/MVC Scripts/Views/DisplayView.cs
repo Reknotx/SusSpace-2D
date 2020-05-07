@@ -16,6 +16,10 @@ public class DisplayView : Element
 
     private void Start()
     {
+        if (timeNumber == null) timeNumber = GameObject.Find("Time number").GetComponent<Text>();
+        if (objectiveCounter == null) objectiveCounter = GameObject.Find("Objectives number").GetComponent<Text>();
+        if (gameOverText == null) gameOverText = GameObject.Find("Game Over").GetComponent<Text>();
+
         minutes = Mathf.Floor(app.model.display.timeLimitInSeconds / 60f);
         seconds = app.model.display.timeLimitInSeconds % 60f;
         timeNumber.text = minutes.ToString() + ":" + seconds.ToString();
@@ -57,7 +61,9 @@ public class DisplayView : Element
         foreach (Sprite image in sprites)
         {
             itemHotbar[index].sprite = image;
+            itemHotbar[index].color = new Color(255, 255, 255, 1);
             index++;
+
 
             if (index == itemHotbar.Count)
             {
@@ -68,6 +74,7 @@ public class DisplayView : Element
         for (int i = index; i < itemHotbar.Count; i++)
         {
             itemHotbar[i].sprite = null;
+            itemHotbar[i].color = new Color(255, 255, 255, 0);
         }
     }
 

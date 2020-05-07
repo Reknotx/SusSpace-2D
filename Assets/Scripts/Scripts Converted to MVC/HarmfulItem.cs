@@ -72,4 +72,9 @@ public class HarmfulItem : Object
         app.controller.player.EndMove();
         Destroy(this.gameObject);
     }
+
+    private void Update()
+    {
+        transform.Rotate(Vector3.forward * -0.5f);
+    }
 }

@@ -52,6 +52,14 @@ public class PlayerController : Element
         }
     }
 
+    public void CollidedWithShip()
+    {
+        app.model.player.Moving = false;
+        app.model.player.posAtStartOfMove = app.view.player.transform.position;
+        app.model.player.destination = app.view.player.transform.position;
+        app.model.player.initialPushOff = true;
+    }
+
     public void AimArrow(Vector3 mousePos)
     {
         //if (!app.model.player.heldItems.HasItems()) return;
