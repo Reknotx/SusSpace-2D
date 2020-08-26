@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * <summary>Handles updating the UI elements of the game.</summary>
+ */
 public class DisplayView : Element
 {
     public List<Image> itemHotbar;
@@ -54,6 +57,11 @@ public class DisplayView : Element
         }
     }
 
+    /**
+     * <summary>Updates the player's item hotbar with their currently held items.</summary>
+     * 
+     * <param name="sprites">The list of sprites to display in the hotbar.</param>
+     */
     public void UpdateHotbar(List<Sprite> sprites)
     {
         int index = 0;
@@ -78,6 +86,10 @@ public class DisplayView : Element
         }
     }
 
+    /**
+     * <summary>Updates the counter for remaining objectives.
+     * </summary>
+     */
     public void UpdateObjectiveCounter()
     {
         objectiveCounter.text = app.model.objectives.GetCompletedObjectives().ToString()

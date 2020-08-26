@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * <summary>Contains references to all of the games models which hold necessary data.</summary>
+ */
 public class SusSpaceModel : Element
 {
     public PlayerModel player;

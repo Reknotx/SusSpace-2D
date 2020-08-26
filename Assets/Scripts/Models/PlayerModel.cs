@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**<summary>Contains all of the player's information and data in the game world.</summary>
+ */
 public class PlayerModel : Element
 {
     public bool Moving { get; set; }
@@ -22,6 +24,7 @@ public class PlayerModel : Element
     [SerializeField]
     private float _initialPushOffDistance;
 
+    /// <value>Returns the distance player pushes off ship from.</value>
     public float InitialPushOffDistance { get { return _initialPushOffDistance; } }
 
     public bool initialPushOff = true;

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * <summary>Holds references the the various views of the game which update the game's state.</summary>
+ */
 public class SusSpaceView : Element
 {
     public DisplayView display;

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * <summary>Allows camera to follow player while keeping camera from looking
+ * out of bounds.</summary>
+ */
 public class CameraFollower : Element
 {
     public Transform player;

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/**
+ * <summary>Handles scene loading.</summary>
+ */
 public class SceneController : MonoBehaviour
 {
     //public GameObject canvas;
@@ -12,6 +15,9 @@ public class SceneController : MonoBehaviour
 
     private AsyncOperation sceneAsync;
 
+    /**
+     * <summary>Starts the loading process for the next game scene.</summary>
+     */
     public void LoadNextScene()
     {
         //StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex + 1));
@@ -19,7 +25,11 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-
+    /**
+     * <summary>Loads the game scene.</summary>
+     * 
+     * <param name="index">The index of the scene to load.</param>
+     */
     IEnumerator LoadScene(int index)
     {
         AsyncOperation scene = SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive);

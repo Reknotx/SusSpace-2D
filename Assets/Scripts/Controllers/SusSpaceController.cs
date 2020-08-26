@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * <summary>Holds references to the game's logic controllers.</summary>
+ */
 public class SusSpaceController : Element
 {
     public DisplayController display;

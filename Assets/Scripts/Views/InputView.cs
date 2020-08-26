@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * <summary>Handles detecting the player's input.</summary>
+ */
 public class InputView : Element
 {
     public bool testing = false;

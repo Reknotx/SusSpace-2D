@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * <summary>Handles player collision detection and movement.</summary>
+ */
 public class PlayerView : Element
 {
     public bool movingOverride = false;
@@ -75,6 +78,9 @@ public class PlayerView : Element
         app.controller.collisions.Collision(eventType, other.gameObject);
     }
 
+    /**
+     * <summary>Linearly interpolates player to destination.</summary>
+     */
     private void LinearInterpolate()
     {
         //need to linearly interpolate to max distance
@@ -103,6 +109,9 @@ public class PlayerView : Element
         playerRB.MovePosition(Vector2.MoveTowards(app.view.player.transform.position, app.model.player.destination, 0.05f));
     }
 
+    /**
+     * <summary>Used to make linear interpolation formula into ease out one.</summary>
+     */
     float EaseOut(float t)
     {
         return 1 - Mathf.Pow(1 - t, app.model.player.easingMod);
